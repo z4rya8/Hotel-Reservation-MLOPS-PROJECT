@@ -7,3 +7,5 @@ imbalanced-learn
 lightgbm
 joblib
 mlflow
+flask
+flask-cors
