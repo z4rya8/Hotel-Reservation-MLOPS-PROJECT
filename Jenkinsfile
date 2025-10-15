@@ -5,12 +5,12 @@ pipeline{
         VENV_DIR = "venv"
 		GCP_PROJECT = "	driven-actor-471620-k7"
 		GCLOUD_PATH = "/var/jenkins_home/gcloud/google-cloud-sdk/bin"
-		# the hell is the above line?
-		# it is the path to the gcloud sdk in jenkins container 
-		# you can find it by running `which gcloud` in the jenkins container
-		# but the jenkins_home is a volume mounted from the host machine
-		# so you need to make sure that the gcloud sdk is installed in the host machine too
-		# you can install it by following the instructions here: https://cloud.google.com/sdk/docs/install
+		// # the hell is the above line?
+		// # it is the path to the gcloud sdk in jenkins container 
+		// # you can find it by running `which gcloud` in the jenkins container
+		// # but the jenkins_home is a volume mounted from the host machine
+		// # so you need to make sure that the gcloud sdk is installed in the host machine too
+		// # you can install it by following the instructions here: https://cloud.google.com/sdk/docs/install
     }
 
     stages{
@@ -39,10 +39,10 @@ pipeline{
         stage('Building Docker Image and Pushing to GCR'){
 	        steps{
 				withCredentials([file(credentialsId: 'gcp-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
-					# is this a function in the above line?
-					# yes, it is a function that takes a list of credentials and a variable name
-					# it will create a file with the credentials and set the variable to the path of the file
-					# you can then use the variable in your shell commands
+					//# is this a function in the above line?
+					//# yes, it is a function that takes a list of credentials and a variable name
+					//# it will create a file with the credentials and set the variable to the path of the file
+					//# you can then use the variable in your shell commands
 					script{
 						echo 'Building Docker Image and Pushing to GCR.........'
 						sh '''
