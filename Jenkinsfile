@@ -76,9 +76,9 @@ pipeline{
 						# --quiet is used to disable all interactive prompts
 
 
-						docker build -t gcr.io/${GCP_PROJECT}/ml-project-1:latest .
+						sudo docker build -t gcr.io/${GCP_PROJECT}/ml-project-1:latest .
 
-						docker push gcr.io/${GCP_PROJECT}/ml-project-1:latest
+						sudo docker push gcr.io/${GCP_PROJECT}/ml-project-1:latest
 
 
 						'''
