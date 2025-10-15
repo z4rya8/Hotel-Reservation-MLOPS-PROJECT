@@ -3,7 +3,7 @@ pipeline{
 
     environment {
         VENV_DIR = "venv"
-		GCP_PROJECT = "	driven-actor-471620-k7"
+		GCP_PROJECT = "driven-actor-471620-k7"
 		GCLOUD_PATH = "/var/jenkins_home/gcloud/google-cloud-sdk/bin"
 		// # the hell is the above line?
 		// # it is the path to the gcloud sdk in jenkins container 
