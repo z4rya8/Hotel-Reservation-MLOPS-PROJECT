@@ -61,7 +61,7 @@ pipeline{
 						# using the key file that we created with the credentials
 						# this will allow us to push the docker image to the gcr
 
-						gcloud config set project = ${GCP_PROJECT}
+						gcloud config set project ${GCP_PROJECT}
 
 						gcloud auth cofigure-docker --quiet
 
