@@ -9,3 +9,4 @@ joblib
 mlflow
 flask
 flask-cors
+gunicorn
