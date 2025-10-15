@@ -63,7 +63,7 @@ pipeline{
 
 						gcloud config set project ${GCP_PROJECT}
 
-						gcloud auth cofigure-docker --quiet
+						gcloud auth configure-docker --quiet
 
 						# why did we use the above command?
 						# the above command is configuring our local docker to use the gcloud sdk as a credential helper
