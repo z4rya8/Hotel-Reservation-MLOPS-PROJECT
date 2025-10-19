@@ -13,7 +13,7 @@ COPY hotel-predict-sparkle-main/ ./
 RUN npm run build
 
 # Stage 2: Build and run the Python backend
-FROM python:slim
+FROM python3.11
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 #what does the above two lines do?
@@ -25,11 +25,6 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 # Install OS dependencies for Python packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libgomp1 \
-    cmake \
-    build-essential \
-    gcc \
-    g++ \
-    make \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
