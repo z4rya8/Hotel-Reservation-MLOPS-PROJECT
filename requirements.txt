@@ -10,4 +10,3 @@ mlflow
 flask
 flask-cors
 gunicorn
-pyarrow==14.0.0
