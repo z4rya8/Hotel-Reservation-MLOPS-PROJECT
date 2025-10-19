@@ -21,12 +21,17 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 # PYTHONUNBUFFERED=1 ensures that Python output is sent straight to the terminal without being buffered
 
 
+     
 # Install OS dependencies for Python packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libgomp1 \
     cmake \
+    build-essential \
+    gcc \
+    g++ \
+    make \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*      
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
