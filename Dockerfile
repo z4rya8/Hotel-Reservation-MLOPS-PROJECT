@@ -13,7 +13,7 @@ COPY hotel-predict-sparkle-main/ ./
 RUN npm run build
 
 # Stage 2: Build and run the Python backend
-FROM python3.11
+FROM python:3.11
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 #what does the above two lines do?
