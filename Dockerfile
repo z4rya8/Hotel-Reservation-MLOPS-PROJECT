@@ -41,7 +41,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy Python application files
 COPY . .
 # after COPY . .
-RUN python pipeline/training_pipeline.py
+#RUN python pipeline/training_pipeline.py
+RUN python -m pipeline.training_pipeline
 
 #Copy the built frontend artifacts from the frontend-builder stage
 #COPY --from=frontend-builder /app/hotel-predict-sparkle-main/dist /app/application/dist
