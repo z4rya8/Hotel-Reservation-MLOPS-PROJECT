@@ -4,3 +4,31 @@ logs/
 MLOPS_PRoject_1.egg-info/
 hotel-predict-sparkle-main/dist/
 hotel-predict-sparkle-main/node_modules/
+#
+# Add to top of your .gitignore
+.env
+.env.local
+.env.*.local
+
+# virtual envs (you have venv/ already, keep it)
+.venv/
+VENV/
+env/
+
+# caches / byte code
+__pycache__/
+*.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Editor settings
+.vscode/
+.idea/
+
+# system files
+.DS_Store
+Thumbs.db
+
+# Python packaging metadata (if present)
+*.egg-info/

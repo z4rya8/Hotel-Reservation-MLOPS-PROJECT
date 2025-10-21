@@ -1,3 +1,50 @@
+#hotel-predict-sparkle-main/dist/
+#hotel-predict-sparkle-main/node_modules/
+#.venv
+# Node build artifacts & deps
 hotel-predict-sparkle-main/dist/
 hotel-predict-sparkle-main/node_modules/
-.venv
+
+# Python virtual envs
+venv/
+.venv/
+VENV/
+env/
+
+# Python caches / bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# ML / run artifacts (often large)
+#artifacts/
+mlruns/
+*.h5
+*.pkl
+
+# Logs / temp files
+logs/
+*.log
+tmp/
+temp/
+
+# Git / metadata
+.git
+.gitignore
+
+# IDE/editor metadata
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local environment / secret files
+.env
+.env.local
+.env.*.local
+
+# Dockerfile copies (if you have alternative Dockerfiles)
+Dockerfile.*

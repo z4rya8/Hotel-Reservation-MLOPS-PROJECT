@@ -86,5 +86,36 @@ pipeline{
 			    }
 	   		}
 		}
+        stage('Deploying to google cloud run'){
+	        steps{
+				withCredentials([file(credentialsId: 'gcp-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
+					//# is this a function in the above line?
+					//# yes, it is a function that takes a list of credentials and a variable name
+					//# it will create a file with the credentials and set the variable to the path of the file
+					//# you can then use the variable in your shell commands
+					script{
+						echo 'Deploying to google cloud run.........'
+						sh '''
+						export PATH=$PATH:${GCLOUD_PATH}
+
+						gcloud auth activate-service-account --key-file=${GOOGLE_APPLICATION_CREDENTIALS}
+
+						gcloud config set project ${GCP_PROJECT}
+
+						gcloud run deploy ml-project-1 \ 
+							--image gcr.io/${GCP_PROJECT}/ml-project-1:latest \
+							--platform managed \
+							--region us-central1 \
+							--allow-unauthenticated \
+							# do we have to add = ? 
+							# no, the above command is correct without the = sign
+
+
+
+						'''
+		        	}
+			    }
+	   		}
+		}
 	}
 }
