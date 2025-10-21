@@ -101,13 +101,9 @@ pipeline{
 						gcloud auth activate-service-account --key-file=${GOOGLE_APPLICATION_CREDENTIALS}
 
 						gcloud config set project ${GCP_PROJECT}
+				        gcloud run deploy ml-project-1 --image gcr.io/${GCP_PROJECT}/ml-project-1:latest --platform managed --region us-central1 --allow-unauthenticated
 
-						gcloud run deploy ml-project-1 \ 
-							--image gcr.io/${GCP_PROJECT}/ml-project-1:latest \
-							--platform managed \
-							--region us-central1 \
-							--allow-unauthenticated \
-							# do we have to add = ? 
+						# do we have to add = ? 
 							# no, the above command is correct without the = sign
 
 
